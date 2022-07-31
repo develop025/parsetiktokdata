@@ -1,5 +1,6 @@
 package k.studio.parsetiktokdata
 
+import android.util.Log
 import k.studio.parsetiktokdata.adapters.TikTokProfileAdapter
 import k.studio.parsetiktokdata.vo.TikTokProfile
 import okhttp3.OkHttpClient
@@ -23,7 +24,11 @@ class TikTokParser {
         retrofit.create(TikTokService::class.java)
     }
 
-    fun getProfile(username: String): Response<TikTokProfile> {
+    suspend fun getProfile(username: String): Response<TikTokProfile> {
         return service.getTikTokProfile(username)
     }
+}
+
+fun String.logD() {
+    Log.d("ParseTikTokData", this)
 }

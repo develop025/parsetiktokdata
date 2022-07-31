@@ -17,6 +17,7 @@ data class TikTokProfile(
     val followerCount: Int,
     val followingCount: Int,
     val heartCount: Int,
-    val videoCount: Int,
-    val videos: List<TikTokProfileVideo>
+    val videoCount: Int
+    //,
+    //val videos: List<TikTokProfileVideo>
 )

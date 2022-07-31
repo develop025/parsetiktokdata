@@ -8,5 +8,5 @@ import retrofit2.http.Path
 internal interface TikTokService {
 
     @GET("/@{username}")
-    fun getTikTokProfile(@Path("username") username: String): Response<TikTokProfile>
+    suspend fun getTikTokProfile(@Path("username") username: String): Response<TikTokProfile>
 }
